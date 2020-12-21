@@ -29,6 +29,30 @@
     height: 100%;
     padding: 0 25px; }
 
+.header-search {
+  align-items: center;
+  background-color: #D6DFE6;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px; }
+  .header-search__input label {
+    align-items: center;
+    display: flex; }
+    .header-search__input label svg {
+      fill: #647584;
+      height: 20px;
+      width: 20px; }
+  .header-search__input input {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    width: 80px; }
+    .header-search__input input::placeholder {
+      color: #647584; }
+
 .chat {
   background: transparent; }
   .chat .chat__actions {
@@ -68,6 +92,40 @@
   background: brown;
   grid-area: friends-list; }
 
+.friend-preview {
+  align-items: flex-start;
+  background-color: #F1F5F8;
+  border-bottom: 1px solid #D6DFE6;
+  border-right: 1px solid #D6DFE6;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  max-height: 120px;
+  padding: 37px 40px; }
+  .friend-preview:hover, .friend-preview--active {
+    background-color: #fff; }
+  .friend-preview__img {
+    border-radius: 4px;
+    flex: 0 0 55px;
+    height: 55px;
+    overflow: hidden; }
+    .friend-preview__img img {
+      display: block; }
+  .friend-preview__content {
+    max-width: 58%;
+    padding: 2px 25px 0; }
+  .friend-preview__name {
+    font-weight: 400;
+    padding-bottom: 15px; }
+  .friend-preview__message {
+    color: #aaaaaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .friend-preview__time {
+    flex: 1 0 50px;
+    padding-top: 2px; }
+
 .online-friends-list {
   background: yellow;
   grid-area: online-friends-list; }
@@ -94,8 +152,60 @@
 
 .message {
   align-self: flex-start;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  justify-self: flex-start;
+  margin-bottom: 20px;
+  max-width: 350px;
   padding: 15px;
-  background-color: #ddd;
-  max-width: 350px; }
+  width: 100%; }
   .message--owner {
-    align-self: flex-end; }
+    align-self: flex-end;
+    color: #000;
+    display: flex;
+    justify-content: flex-end; }
+    .message--owner .message__img {
+      display: none; }
+    .message--owner .message__date {
+      color: #999999; }
+  .message__content {
+    background-color: #509DE1;
+    border-radius: 5px;
+    margin-left: 30px;
+    padding: 25px; }
+    .message--owner .message__content {
+      background-color: #f1f5f8; }
+  .message__text {
+    line-height: 1.6;
+    margin-bottom: 15px; }
+
+.add-friend {
+  align-items: center;
+  background-color: #F1F5F8;
+  border: 1px solid #D6DFE6;
+  border-left: none;
+  color: #509DE1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px; }
+  .add-friend__button {
+    height: 100%; }
+  .add-friend__label {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase; }
+
+.button {
+  background: #509DE1;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  height: 100%;
+  line-height: 100%;
+  padding: 0 30px;
+  text-transform: uppercase; }
+  .button:hover, .button:active {
+    border: none; }
