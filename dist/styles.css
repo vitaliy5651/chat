@@ -19,6 +19,12 @@
 .aside-right {
   grid-area: aside-right; }
 
+.logo-yandex {
+  position: fixed;
+  width: 240px;
+  height: 240px;
+  color: green; }
+
 .header {
   background: #509DE1;
   grid-area: header;
